@@ -1,4 +1,6 @@
 class Solution:
     def scoreOfString(self, s: str) -> int:
-        absdiff = lambda x: abs(ord(x[0]) - ord(x[1]))
-        return sum(map(absdiff,pairwise(s)))
+        score = 0
+        for i in range(len(s) - 1):
+            score += abs(ord(s[i]) - ord(s[i + 1]))
+        return score
