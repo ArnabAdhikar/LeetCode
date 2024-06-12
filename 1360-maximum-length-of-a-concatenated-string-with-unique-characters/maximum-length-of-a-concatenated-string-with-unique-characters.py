@@ -25,5 +25,6 @@ class Solution:
                 # cleanup from the backtracking
                 for c in arr[i]:
                     charset.remove(c)
+            # concatination didn't happen and charset is now empty
             return max(res, backtrack(i+1))
         return backtrack(0)
